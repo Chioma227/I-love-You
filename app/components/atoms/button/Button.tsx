@@ -9,19 +9,17 @@ interface buttonProps{
 }
 
 const Button = ({children, variant, className}: buttonProps) => {
-  let buttonStyle = ""
+  let buttonStyle = "px-[12px] py-[10px]"
   switch (variant) {
     case buttonVariants.DEFAULT:
-      buttonStyle = clsx("", className)
+      buttonStyle = clsx("rounded-full ", className)
       break;
   
     default:
       break;
   }
   return (
-    <div>
-      
-    </div>
+    <button>{children}</button>
   )
 }
 

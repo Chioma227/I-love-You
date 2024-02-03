@@ -14,23 +14,21 @@ const Container = ({
   let containerStyle = "";
   switch (variant) {
     case containerVariants.ROUNDED:
-      containerStyle = clsx("rounded-md", className)
+      containerStyle = clsx("rounded-md", className);
       break;
     case containerVariants.FLEXED:
-      containerStyle = clsx("flex items-center justify-center", className)
+      containerStyle = clsx("flex items-center justify-center", className);
       break;
     case containerVariants.ABSOLUTE:
-      containerStyle = clsx("absolute z-10", className)
+      containerStyle = clsx("absolute z-10", className);
       break;
     case containerVariants.RELATIVE:
-      containerStyle = clsx("relative", className)
+      containerStyle = clsx("relative", className);
       break;
     default:
       break;
   }
-  return <main className={clsx(containerStyle, className)}>
-    {children}
-  </main>;
+  return <main className={clsx(containerStyle, className)}>{children}</main>;
 };
 
 export default Container;
