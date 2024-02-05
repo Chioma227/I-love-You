@@ -3,4 +3,5 @@ export enum containerVariants {
   FLEXED = "FLEXED",
   ABSOLUTE = "ABSOLUTE",
   RELATIVE = "RELATIVE",
+  FIT = "FIT"
 }

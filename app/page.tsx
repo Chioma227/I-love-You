@@ -34,8 +34,8 @@ const page = () => {
               src="opened-envelope"
               imageExtention={imgExt}
               alt="envelope"
-              width={350}
-              height={350}
+              width={310}
+              height={310}
             />
           </motion.div>
          </Link>
@@ -47,7 +47,6 @@ const page = () => {
             className="transition-all cursor-pointer w-fit h-fit"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            // onClick={handleRoute}
           >
             <ImageComponent
               src="closed-envelope"

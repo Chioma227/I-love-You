@@ -2,19 +2,14 @@ import React from "react";
 import Container from "@/app/components/atoms/container/Container";
 import { containerVariants } from "@/app/components/atoms/container/container.type";
 import ImageComponent from "@/app/components/atoms/Image";
+import Text from "@/app/components/atoms/text";
+import { content } from "@/app/helpers/texts";
 
 const Message = () => {
-  const imgExt = "png";
   return (
-    <Container variant={containerVariants.RELATIVE}>
-      <Container variant={containerVariants.ABSOLUTE}>
-        <ImageComponent
-          src="single-rose"
-          imageExtention={imgExt}
-          alt="message"
-          width={300}
-          height={300}
-        />
+    <Container variant={containerVariants.FLEXED} className="h-screen">
+      <Container variant={containerVariants.FIT} width={300}>
+        <Text>{content}</Text>
       </Container>
     </Container>
   );

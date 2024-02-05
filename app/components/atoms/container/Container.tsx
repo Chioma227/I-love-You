@@ -6,10 +6,12 @@ const Container = ({
   children,
   variant,
   className,
+  width,
 }: {
   children: React.ReactNode;
   variant: containerVariants;
   className?: string;
+  width?: number,
 }) => {
   let containerStyle = "";
   switch (variant) {
@@ -25,10 +27,13 @@ const Container = ({
     case containerVariants.RELATIVE:
       containerStyle = clsx("relative", className);
       break;
+    case containerVariants.FIT:
+      containerStyle = clsx(`w-${width}`, className);
+      break;
     default:
       break;
   }
-  return <main className={clsx(containerStyle, className)}>{children}</main>;
+  return <main className={clsx(containerStyle, className)} >{children}</main>;
 };
 
 export default Container;
