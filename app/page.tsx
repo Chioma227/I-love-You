@@ -6,7 +6,7 @@ import { containerVariants } from "./components/atoms/container/container.type";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
-const page = () => {
+const Page = () => {
   const [isOpened, setIsOpened] = useState<boolean>(false);
   const imgExt = "png";
 
@@ -62,4 +62,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
