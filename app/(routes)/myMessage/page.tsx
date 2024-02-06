@@ -4,12 +4,14 @@ import { containerVariants } from "@/app/components/atoms/container/container.ty
 import ImageComponent from "@/app/components/atoms/Image";
 import Text from "@/app/components/atoms/text";
 import { content } from "@/app/helpers/texts";
+import Link from "next/link";
 
 const Message = () => {
   return (
     <Container variant={containerVariants.FLEXED} className="h-screen">
-      <Container variant={containerVariants.FIT} width={300}>
+      <Container variant={containerVariants.FIT}>
         <Text>{content}</Text>
+        <Link href="/">&lt; Back</Link>
       </Container>
     </Container>
   );

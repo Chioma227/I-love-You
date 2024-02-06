@@ -6,12 +6,10 @@ const Container = ({
   children,
   variant,
   className,
-  width,
 }: {
   children: React.ReactNode;
   variant: containerVariants;
   className?: string;
-  width?: number,
 }) => {
   let containerStyle = "";
   switch (variant) {
@@ -28,7 +26,7 @@ const Container = ({
       containerStyle = clsx("relative", className);
       break;
     case containerVariants.FIT:
-      containerStyle = clsx(`w-${width}`, className);
+      containerStyle = clsx(`md:w-[40%] w-[85%]`, className);
       break;
     default:
       break;
